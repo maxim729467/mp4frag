@@ -58,9 +58,9 @@ class Mp4Frag extends Transform {
     super({ readableObjectMode: true });
     if (typeof options === 'object') {
       if (typeof options.hlsPlaylistBase !== 'undefined') {
-        if (/[^a-z_]/gi.test(options.hlsPlaylistBase)) {
-          throw new Error('hlsPlaylistBase must only contain underscores and case-insensitive letters (_, a-z, A-Z)');
-        }
+//         if (/[^a-z_]/gi.test(options.hlsPlaylistBase)) {
+//           throw new Error('hlsPlaylistBase must only contain underscores and case-insensitive letters (_, a-z, A-Z)');
+//         }
         this._hlsPlaylistBase = options.hlsPlaylistBase;
         this._hlsPlaylistInit = Mp4Frag._validateBoolean(options.hlsPlaylistInit, _HLS_INIT_DEF);
         this._hlsPlaylistSize = Mp4Frag._validateNumber(options.hlsPlaylistSize, _HLS_SIZE_DEF, _HLS_SIZE_MIN, _HLS_SIZE_MAX);
